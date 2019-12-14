@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--  1-->
+  <input type="checkbox" id="one" onchange="f1()">
+
+  <input type="radio" name="r1" value="5"> 0
+  <input type="radio" name="r1" value="53"> 1
+  <input type="radio" name="r1" value="535"> 2
+  <button onclick="f2()"> Check which el checked</button>
+  <br>
+
+<!--  2-->
+  <select name="" id="mySelect" onchange="f3()">
+    <option value="">Apple</option>
+    <option value="">Orange</option>
+    <option value="">Pineapple</option>
+    <option value="">Coconut</option>
+  </select>
+
+  <input type="range" min="0" max="100" step="1" oninput="f4()" id="ran1">
+  <div id="test" class="test"></div>
+
+<!--  3-->
+   <div id="block1">
+    <p>Верхний левый угол:
+      <input type="range" id="rtl" min="0" max="100" value="0" oninput="f5()">
+      <input type="text" id="ttl" value="0">
+    </p>
+
+    <p>Верхний правый угол:
+      <input type="range" id="rtr" min="0" max="100" value="0" oninput="f5()">
+      <input type="text" id="ttr" value="0">
+    </p>
+
+    <p>Нижний правый угол:
+      <input type="range" id="rbr" min="0" max="100" value="0" oninput="f5()">
+      <input type="text" id="tbr" value="0">
+    </p>
+
+    <p>Нижний левый угол:
+      <input type="range" id="rbl" min="0" max="100" value="0" oninput="f5()">
+      <input type="text" id="tbl" value="0">
+    </p>
+  </div>
+  <div class="block" id="block"></div>
+  <br>
+
+<!--  4-->
+  <div id="nav">
+    <div class="menu-item">
+     Menu 1
+      <div class="submenu">
+        Submenu
+      </div></div>
+    <div class="menu-item">
+     Menu 2
+      <div class="submenu">
+        Submenu
+      </div></div>
+    <div class="menu-item">
+     Menu 3
+      <div class="submenu">
+        Submenu
+      </div></div>
+  </div>
+  <br>
+
+<!--5-->
+  <div id="tabs">
+    <div class="tab whiteborder" >Tab 1</div>
+    <div class="tab">Tab 2</div>
+    <div class="tab">Tab 3</div>
+    <div class="tabContent">111</div>
+    <div class="tabContent">222</div>
+    <div class="tabContent">333</div>
+  </div>
+  <br>
+
+<!--6-->
+  <button id="myBtn">Open modal</button>
+  <div id="myModal" class="modal">
+    <div class="modelContent">
+      <span class="closeMod">&times;</span>
+      <p>Modal window</p>
+    </div>
+  </div>
+  <br>
+
+<!--7-->
+  <br>
+  <button id="anim">Animation</button>
+  <div id="myContainer">
+    <div id="myAnimation"></div>
+  </div>
+  <br>
+
+<!--  8-->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1/3</div>
+      <div class="placeholder" id="placeholder1"></div>
+      <div class="text">Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2/3</div>
+      <div class="placeholder" id="placeholder2"></div>
+      <div class="text">Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3/3</div>
+      <div class="placeholder" id="placeholder3"></div>
+      <div class="text">Text</div>
+    </div>
+      <a class="prev" onclick="plusSlider(-1)">&#10094</a>
+      <a class="next" onclick="plusSlider(1)">&#10095</a>
+  </div>
+  <br>
+
+  <div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+
+<!--9-->
+  <input type="text" onkeyup="f11()" id="filterInput" placeholder="Search for names">
+  <ul id="myUl">
+    <li><a href="#" class="header">A</a></li>
+      <li><a href="#">Anton</a></li>
+      <li><a href="#">Andrey</a></li>
+
+    <li><a href="#" class="header">B</a></li>
+      <li><a href="#">Boris</a></li>
+      <li><a href="#">Bodya</a></li>
+
+    <li><a href="#" class="header">C</a></li>
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+  </ul>
+  <br>
+
+<!--10-->
+  <p>Number 1: <input type="text" id="n1"></p>
+  <p>Number 2: <input type="text" id="n2"></p>
+
+  <button onclick="plus()" >+</button>
+  <button onclick="minus()" >-</button>
+  <button onclick="multiply()" >*</button>
+  <button onclick="divide()" >/</button>
+
+  <hr>
+
+  <p id="out"></p>
+  <br>
+
+<!--11-->
+  <div id="map"></div>
+  <br>
+
+<!--12-->
+  <img id="myImg" src="dark-shapes-abstract_1551645544.jpg" alt="modalImg" width="50%">
+  <div id="modalImg" class="modal">
+    <span class="modalClose" onclick="document.getElementById('modalImg').style.display = 'none'">&times;</span>
+    <img id="img01" class="modal-content">
+    <div id="caption"></div>
+  </div>
+  <br>
+
+<!--13  -->
+  <div id="progress">
+    <div id="bar">
+      <div id="label">10%</div>
+    </div>
+  </div>
+  <button onclick="move()">Click</button>
+  <br>
+
+<!--14  -->
+  <div class="popup" onclick="f12()">Click me!
+    <span class="popuptext" id="popup">Lorem ipsum dolor sit amet, consectetur.</span>
+  </div>
+  <br>
+
+<!--15  -->
+  <button class="accordion">Section 1</button>
+  <div class="panel"><p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></div>
+
+  <button class="accordion">Section 2</button>
+  <div class="panel"><p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></div>
+
+  <button class="accordion">Section 3</button>
+  <div class="panel"><p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p></div>
+  <br>
+
+<!--16  -->
+  <h1>Money Converter</h1>
+  <p>
+    <label>$</label>
+    <input type="number" id="inputdol" placeholder="$" oninput="moneyConverter(this.value)" onchange="moneyConverter(this.value)">
+  </p>
+  <p>RUB: <span id="outputrub"></span></p>
+  <p>UAN: <span id="outputuah"></span></p>
+  <p>EURO: <span id="outputeuro"></span></p>
+
+
+  <script src="main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+    async defer></script>
+</body>
+</html>
